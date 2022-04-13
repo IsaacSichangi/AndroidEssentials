@@ -20,6 +20,21 @@ Kotlin
 		}
 	}
   ```
+  **NB** As of gradle 7.x.x allprojects has been [depreciated](https://stackoverflow.com/questions/69468492/how-can-i-add-jitpack-io-as-a-repository-in-my-build-gradle-correctly) in favor of Dependency Resolution Management. Go to settings.gradle and add the jitpack.io repository
+  
+  ```
+  dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+       
+        // e.g this is how you would add jitpack
+        maven { url "https://jitpack.io" }
+        
+    }
+}
+  ```
  
  2. Add the dependency
    ```
