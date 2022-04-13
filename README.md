@@ -80,7 +80,7 @@ AndroidEssentials.deleteValue(context: Context, key: String?, app_name: String)
 ```
 ### File Management
 ```
-AndroidEssentials.checkFileExistence(context: Context, filename: String):Bookean
+AndroidEssentials.checkFileExistence(context: Context, filename: String):Boolean
        
 AndroidEssentials.storeFile(title: String, contents: String?, context: Context):Boolean
        
