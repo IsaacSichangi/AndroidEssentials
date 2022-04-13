@@ -203,9 +203,9 @@ class AndroidEssentials {
             val alert: AlertDialog.Builder = AlertDialog.Builder(activity)
             val cancel_button_message = "cancel";
             alert.setMessage(message)
-            alert.setNegativeButton(cancel_button_message, { dialog, which ->
+            alert.setNegativeButton(cancel_button_message) { dialog, which ->
                 dialog.dismiss();
-            }).show();
+            }.show();
         }
 
 
@@ -266,8 +266,7 @@ class AndroidEssentials {
             var input: BufferedReader? = null
             var text: String? = null
             try {
-                input =
-                    BufferedReader(InputStreamReader(context.openFileInput(filename.trim { it <= ' ' })))
+                input = BufferedReader(InputStreamReader(context.openFileInput(filename.trim { it <= ' ' })))
                 var line: String
                 val buffer = StringBuffer()
                 while (input.readLine().also { line = it } != null) {
